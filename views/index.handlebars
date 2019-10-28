@@ -28,6 +28,13 @@
 	<div class="col-sm-6">
 <h2>burgers that are Delicious!</h2>
 
+{{#each burgers}}
+    {{#unless this.devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{!-- {{this.burger_name}} --}}
+    {{/unless}}
+  {{/each}}
+
 <ul>
   {{!-- {{#each burgers}}
     {{#if this.devoured}}
