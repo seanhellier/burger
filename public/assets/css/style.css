@@ -21,3 +21,10 @@ li {
 .form-group {
 	margin-bottom: 5px;
 }
+
+.eatenBurgers {
+	list-style-type: disc;
+	padding: 5px;
+	margin: 5px;
+	background: #faebd7;
+}

@@ -3,12 +3,40 @@
 	<div class="row">
 	    <div class="center col-sm-12">
             <div class = "banner">
-			<img src="assets/img/burger.png" alt="Eat-Da-Burger App">
+			<img src="assets/img/cat_burger.jpg" alt="Eat-Da-Burger App">
 	        <h1>Eat Burgers App</h1>
 	    </div>
     </div>
   	</div>
+    <hr>
+    <form class="create-form">
+	<div class="row">
+	    <div class="center col-sm-12">
+    <div class="form-group">
+      <label for="ca"><h3>Add a Burger:</h3></label>
+      <input type="text" id="ca" name="name">
+    </div>
+    <button type="submit">Add Burger</button>
+  </form>
 	<!-- end .row -->
+	<div class="row" class="text-center">
+{{!-- <form class="create-form">
+	<div class="row">
+	    <div class="center col-sm-12">
+    <div class="form-group">
+      <label for="ca"><h3>Add a Burger:</h3></label>
+      <input type="text" id="ca" name="name">
+    </div>
+    <button type="submit">Add Burger</button>
+  </form> --}}
+	</div>
+  <Div>
+    <hr>
+  </Div>
+	   
+  </div>
+</div>
+
 
 	<div class="row">
 	    <div class="col-sm-6">
@@ -27,55 +55,21 @@
 
 	<div class="col-sm-6">
 <h2>burgers that are Eaten!</h2>
-
 {{#each burgers}}
     {{#if this.devoured}}
   {{!-- {{burger_name}} --}}
+  <div class="eatenBurgers">
+      <ul>
+        <input class="change-state" data-id="{{this.id}}" type="text" placeholder="{{this.burger_name}}" readonly>
+        {{!-- {{#if devoured}}Eat Me!{{else}}I'm Eaten!{{/if}} --}}
+      </ul>
+    </div>
+    </input>
+        {{!-- {{> burgers/burger-block devoured=false}} --}}
+        {{!-- {{this.burger_name}} --}}
+      {{/if}}
+    {{/each}}
+    </div>
 
-	  <input class="change-state" data-id="{{this.id}}" type="text" placeholder="{{this.burger_name}}" readonly>
-		{{!-- {{#if devoured}}Eat Me!{{else}}I'm Eaten!{{/if}} --}}
-  
-	</input>
-      {{!-- {{> burgers/burger-block devoured=false}} --}}
-      {{!-- {{this.burger_name}} --}}
-    {{/if}}
-  {{/each}}
-
-<ul>
-  {{!-- {{#each burgers}}
-    {{#if this.devoured}}
-      {{> burgers/burger-state devoured=false}}
-            {{this.burger_name}}
-    {{/if}}
-  {{/each}} --}}
-</ul>
-	    </div>
-
-  	</div>
-	<!-- end .row -->
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-	<div class="row">
-	    <div class="center col-sm-12">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
   </div>
-
-  {{!-- <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
-
-  <button type="submit">Add Burger</button>
-</form>
-
-	    </div>
-	
-  	</div>
-	<!-- end .row -->
-
 </div>
