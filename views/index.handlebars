@@ -26,13 +26,19 @@
 
 
 	<div class="col-sm-6">
-<h2>burgers that are Delicious!</h2>
+<h2>burgers that are Eaten!</h2>
 
 {{#each burgers}}
-    {{#unless this.devoured}}
-      {{> burgers/burger-block devoured=false}}
+    {{#if this.devoured}}
+  {{!-- {{burger_name}} --}}
+
+	  <input class="change-state" data-id="{{this.id}}" type="text" placeholder="{{this.burger_name}}" readonly>
+		{{!-- {{#if devoured}}Eat Me!{{else}}I'm Eaten!{{/if}} --}}
+  
+	</input>
+      {{!-- {{> burgers/burger-block devoured=false}} --}}
       {{!-- {{this.burger_name}} --}}
-    {{/unless}}
+    {{/if}}
   {{/each}}
 
 <ul>

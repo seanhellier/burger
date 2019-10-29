@@ -3,7 +3,7 @@
 
 ## Overview
 
-This app uses javascript,handlebars and mySQL to create an app that allows users to create burgers and then "devour" them by clickin a button to move the selected burger to the other side of the page.
+This app uses node, javascript, express, handlebars and mySQL to create an app that allows users to create burgers and then "devour" them by clickin a button to move the selected burger to the other side of the page.
 
 mySQL database schema
   * burger
