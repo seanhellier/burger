@@ -3,6 +3,7 @@
 }
 
 li {
+	list-style-type: none;
 	padding: 5px;
 	margin: 5px;
 	background: #faebd7;
@@ -23,7 +24,7 @@ li {
 }
 
 .eatenBurgers {
-	list-style-type: disc;
+	list-style-type: none;
 	padding: 5px;
 	margin: 5px;
 	background: #faebd7;
